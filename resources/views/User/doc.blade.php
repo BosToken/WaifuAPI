@@ -24,7 +24,7 @@
             </div>
 
             <ul class="list-group">
-                <li class="list-group-item">Endpoint : </li>
+                <li class="list-group-item">Endpoint : http://envywaifu.herokuapp.com/api/waifu</li>
                 <li class="list-group-item">
                 @foreach ($waifu as $waifus)
                     <div class="input-group mb-3">
