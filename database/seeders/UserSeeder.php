@@ -34,10 +34,19 @@ class UserSeeder extends Seeder
         ]);
         DB::table('users')->insert([
             'id' => '3',
+            'email' => 'marselamargareta90@gmail.com',
+            'username' => 'bakacela',
+            'password' => 'bakacela',
+            'role' => '1',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
+        ]);
+        DB::table('users')->insert([
+            'id' => '4',
             'email' => 'agent@gmail.com',
             'username' => 'agent',
             'password' => 'agent',
-            'role' => '1',
+            'role' => '2',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
         ]);
