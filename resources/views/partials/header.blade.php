@@ -8,7 +8,7 @@
       >
         <li class="nav-item"><a href="/" class="nav-link px-2 link-dark"><b>WaifuAPI</b></a></li>
         <li class="nav-item"><a href="/" class="nav-link px-2 link-dark">Home</a></li>
-        <li class="nav-item"><a href="/api" class="nav-link px-2 link-dark">API</a></li>
+        {{-- <li class="nav-item"><a href="/api" class="nav-link px-2 link-dark">API</a></li> --}}
         <li class="nav-item"><a href="/documentation" class="nav-link px-2 link-dark">Documentation</a></li>
       </ul>
 

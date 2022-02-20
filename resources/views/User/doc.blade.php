@@ -16,15 +16,22 @@
     @section('content')
         <div class="container">
 
-            <div class="p-5 mb-4 bg-light rounded-3">
-                <div class="container-fluid py-5">
-                  <h1 class="display-5 fw-bold">Waifu API</h1>
-                  <p class="col-md-8 fs-4">Lorei Ipsum Sir Amet banyak bacot.</p>
+            <section class="py-5 text-center container">
+                <div class="row py-lg-5">
+                  <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Random Waifu API</h1>
+                    <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+                  </div>
                 </div>
-            </div>
+              </section>
 
             <ul class="list-group">
-                <li class="list-group-item">Endpoint : http://envywaifu.herokuapp.com/api/waifu</li>
+                <li class="list-group-item">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Endpoint :</label>
+                        <input type="email" class="form-control" value="http://envywaifu.herokuapp.com/api/waifu" aria-describedby="emailHelp" disabled>
+                      </div>
+                </li>
                 <li class="list-group-item">
                 @foreach ($waifu as $waifus)
                     <div class="input-group mb-3">
