@@ -3,13 +3,15 @@ namespace App\Http\Controllers;
 
 use Session;
 use App\Models\User;
+use App\Models\Settings;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
     public function login(){
         $data = Session::get('user');
-        return view('User.login', compact('data'));
+        $setting = Settings::get();
+        return view('User.login', compact('data', 'setting'));
     }
 
     public function check(Request $request){

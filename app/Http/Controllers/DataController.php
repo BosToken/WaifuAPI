@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Session;
 use App\Models\User;
 use App\Models\Waifu;
+use App\Models\Settings;
 use Illuminate\Http\Request;
 
 class DataController extends Controller
@@ -19,12 +20,14 @@ class DataController extends Controller
     public function viewWaifu(){
         $data = Session::get('user');
         $waifu = Waifu::get();
-        return view('Admin.Read.waifu', compact('waifu', 'data'));
+        $setting = Settings::get();
+        return view('Admin.Read.waifu', compact('waifu', 'data', 'setting'));
     }
 
     public function createWaifu(){
         $data = Session::get('user');
-        return view('Admin.Create.waifu', compact('data'));
+        $setting = Settings::get();
+        return view('Admin.Create.waifu', compact('data', 'setting'));
     }
 
     public function storeWaifu(Request $request){
@@ -46,13 +49,15 @@ class DataController extends Controller
     public function detailWaifu(Request $request, $id){
         $data = Session::get('user');
         $waifu = Waifu::where('id', $id)->get();
-        return view('Admin.Read.waifuDetail', compact('data', 'waifu'));
+        $setting = Settings::get();
+        return view('Admin.Read.waifuDetail', compact('data', 'waifu', 'setting'));
     }
 
     public function editWaifu(Request $request, $id){
         $data = Session::get('user');
         $waifu = Waifu::where('id', $id)->get();
-        return view('Admin.Update.waifuEdit', compact('data', 'waifu'));
+        $setting = Settings::get();
+        return view('Admin.Update.waifuEdit', compact('data', 'waifu', 'setting'));
     }
 
     public function updateWaifu(Request $request, $id){
@@ -66,10 +71,9 @@ class DataController extends Controller
         return back();
     }
 
-    public function deleteWaifu($id){
-
-        Waifu::where('id', $id)->delete();
-        return redirect()->action([DataController::class, 'viewWaifu']);
-    }
+    // public function deleteWaifu($id){
+    //     Waifu::where('id', $id)->delete();
+    //     return redirect()->action([DataController::class, 'viewWaifu']);
+    // }
     
 }

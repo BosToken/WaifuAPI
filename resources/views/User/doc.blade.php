@@ -20,7 +20,7 @@
                 <div class="row py-lg-5">
                   <div class="col-lg-6 col-md-8 mx-auto">
                     <h1 class="fw-light">Random Waifu API</h1>
-                    <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+                    <p class="lead text-muted">Our API is free to use without using a user token API installation only requires endpoint.</p>
                   </div>
                 </div>
               </section>
@@ -28,8 +28,10 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Endpoint :</label>
-                        <input type="email" class="form-control" value="http://envywaifu.herokuapp.com/api/waifu" aria-describedby="emailHelp" disabled>
+                        <label for="exampleInputEmail1" class="form-label"><i class="fas fa-link"></i> Endpoint :</label>
+                        @foreach($setting as $settings)
+                        <input type="email" class="form-control" value="{{$settings->endpoint}}" aria-describedby="emailHelp" disabled>
+                        @endforeach
                       </div>
                 </li>
                 <li class="list-group-item">

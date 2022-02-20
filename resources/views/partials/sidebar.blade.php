@@ -130,13 +130,15 @@
 }
 </style>
 
+@foreach ($setting as $settings)
+    
 <div id="wrapper">
 
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
                 <a href="/">
-                    WaifuAPI
+                    {{$settings->web_title}}
                 </a>
             </li>
             <hr style="color: white">
@@ -146,9 +148,9 @@
             <li>
                 <a href="/admin">Dashboard</a>
             </li>
-            <li>
+            {{-- <li>
                 <a href="/api/waifu">Waifu EndPoint</a>
-            </li>
+            </li> --}}
             <hr style="color: white">
             <center>
             <p style="color: white">Data</p>
@@ -170,17 +172,17 @@
                 </ul>
             </li>
             
-            <hr style="color: white">
+            
+            @if($data->role === 1)<hr style="color: white">
             <center>
             <p style="color: white">Settings</p>
             </center>
             <li>
-            @if($data->role === 1)
-            <a href="#">Admin Settings</a>
+            <a href="/agent/settings">Agent Settings</a>
+            <a href="/web/settings">Web Settings</a>
+            </li>
             @else
             @endif
-            <a href="#">Web Settings</a>
-        </li>
         </ul>
     </div>
 
@@ -191,3 +193,4 @@
     </div>
 
 </div>
+@endforeach

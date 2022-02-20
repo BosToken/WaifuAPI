@@ -33,7 +33,12 @@ Route::group(['middleware' => ['Admin']], function () {
     Route::get('detail/waifu/{id}', [DataController::class, 'detailWaifu']);
     Route::get('edit/waifu/{id}', [DataController::class, 'editWaifu']);
     Route::put('update/waifu/{id}', [DataController::class, 'updateWaifu']);
+    Route::put('update/setting/webname/{id}', [AdminController::class, 'updateWebTitle']);
+    Route::put('update/setting/endpoint/{id}', [AdminController::class, 'updateEndpoint']);
+    Route::put('update/setting/corp/{id}', [AdminController::class, 'updateCorp']);
     Route::get('delete/waifu/{id}', [DataController::class, 'deleteWaifu']);
+    Route::get('agent/settings',[AdminController::class, 'agentSettings']);
+    Route::get('web/settings',[AdminController::class, 'webSettings']);
 });
 
 Route::get('debug',[LoginController::class, 'debug']);
