@@ -21,7 +21,7 @@
                 <div class="container-fluid py-5">
                   <h1 class="fw-light">Random Waifu API</h1>
                   <p class="col-md-8 fs-4">designed to make the experience when gatcha waifu isn't trash, like the games you've played before.</p>
-                  <p class="col-md-8 fs-4" style="color: yellow">warning, the grade rating is only based on the author's subjective, so we hope you understand it.</p>
+                  <p class="col-md-8 fs-4" style="color: yellow"><i class="fas fa-exclamation-triangle"></i> the grade rating is only based on the author's subjective, so we hope you understand it <i class="fas fa-exclamation-triangle"></i></p>
                   <a href="/documentation"><button class="btn btn-primary btn-lg" type="button">Getting Started</button></a>
                 </div>
             </div>

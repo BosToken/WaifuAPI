@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Admin Dashboard</title>
+    <title>Web Settings</title>
     @extends('partials.head')
 </head>
 

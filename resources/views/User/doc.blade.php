@@ -34,14 +34,37 @@
                         @endforeach
                       </div>
                 </li>
-                <li class="list-group-item">
                 @foreach ($waifu as $waifus)
+                <li class="list-group-item">
+                    <label for="exampleInputEmail1" class="form-label"><i class="fas fa-id-badge"></i> Name :</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" value="{{$waifus->name}}" aria-label="Recipient's username" aria-describedby="basic-addon2" disabled>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <label for="exampleInputEmail1" class="form-label"><i class="fas fa-external-link-alt"></i> Anime :</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" value="{{$waifus->anime}}" aria-label="Recipient's username" aria-describedby="basic-addon2" disabled>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <label for="exampleInputEmail1" class="form-label"><i class="fas fa-image"></i> Picture :</label>
+                    <br>
+                    <img src="{{$waifus->picture}}" class="img-fluid" alt="...">
+                </li>
+                <li class="list-group-item">
+                    <label for="exampleInputEmail1" class="form-label"><i class="fas fa-star"></i> Grade :</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" value="{{$waifus->grade}}" aria-label="Recipient's username" aria-describedby="basic-addon2" disabled>
+                    </div>
+                </li>
+                <li class="list-group-item">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" value="{{$waifus}}" aria-label="Recipient's username" aria-describedby="basic-addon2" disabled>
                         <a href="/documentation"><button class="btn btn-warning" type="submit">Try It!</button></a>
                     </div>
-                 @endforeach
                 </li>
+                 @endforeach
             </ul>
             
         </div>

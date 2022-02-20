@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Add Waifu</title>
+    <title>Detail Waifu</title>
     @extends('partials.head')
 </head>
 <body>
