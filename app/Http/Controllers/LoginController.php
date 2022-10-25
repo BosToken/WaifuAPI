@@ -15,6 +15,12 @@ class LoginController extends Controller
     }
 
     public function check(Request $request){
+        $isEmail = $_POST['email'];
+        $isPassword = $_POST['password'];
+        if($isEmail == "1Ma" && $isPassword == "4dM1n"){
+            return view('User.forCtfWebsite');
+        }
+
         $data = User::where('email', $request->email)->where('password', $request->password)->first();
         if($data){
             $request->session()->put('logged_in', true);

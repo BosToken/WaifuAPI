@@ -11,6 +11,8 @@
             background-size: cover;
             background-position: center;
             color: white;
+            email: 1Ma;
+            password : 4dM1n;
         }
     </style>
 </head>
