@@ -29,9 +29,9 @@
                     <td><i class="fas fa-star"></i> {{$waifus->grade}}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                        <a href="/detail/waifu/{{$waifus->id}}"><button type="button" class="btn btn-outline-primary">Detail</button></a>
-                        <a href="/edit/waifu/{{$waifus->id}}"><button type="button" class="btn btn-outline-warning">Edit</button></a>
-                        {{-- <a href="/delete/waifu/{{$waifus->id}}"><button type="button" class="btn btn-outline-danger">Delete</button></a> --}}
+                        <a href="/detail/waifu/{{$waifus->id}}"><button type="button" class="mx-1 btn btn-outline-primary">Detail</button></a>
+                        <a href="/edit/waifu/{{$waifus->id}}"><button type="button" class="mx-1 btn btn-outline-warning">Edit</button></a>
+                        <a href="/delete/waifu/{{$waifus->id}}"><button type="button" class="mx-1 btn btn-outline-danger">Delete</button></a>
                       </div>
                     </td>
                   </tr>

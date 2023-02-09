@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
     <style>
         .tab {
     display: inline-block;
@@ -53,16 +54,20 @@
                     <img src="{{$waifus->picture}}" class="img-fluid" alt="...">
                 </li>
                 <li class="list-group-item">
-                    <label for="exampleInputEmail1" class="form-label"><i class="fas fa-star"></i> Grade :</label>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" value="{{$waifus->grade}}" aria-label="Recipient's username" aria-describedby="basic-addon2" disabled>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" value="{{$waifus}}" aria-label="Recipient's username" aria-describedby="basic-addon2" disabled>
-                        <a href="/documentation"><button class="btn btn-warning" type="submit">Try It!</button></a>
-                    </div>
+                    <md-block>
+                        ```javascript
+                            {
+                                "id":{{$waifus->id}},
+                                "name":"{{$waifus->name}},
+                                "anime":"{{$waifus->anime}}",
+                                "picture":"{{$waifus->picture}}",
+                                "grade":{{$waifus->grade}},
+                                "created_at":"{{$waifus->created_at}}",
+                                "updated_at":"{{$waifus->updated_at}}"
+                            }
+                        ```
+                    </md-block>
+                    <a href="/documentation"><button class="btn btn-warning" type="submit">Try It!</button></a>
                 </li>
                  @endforeach
             </ul>

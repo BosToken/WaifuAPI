@@ -15,7 +15,6 @@ class WaifuSeeder extends Seeder
     public function run()
     {
         DB::table('waifus')->insert([
-            'id' => '1',
             'name' => 'Mikasa Ackerman',
             'anime' => 'Shingeki no Kyojin',
             'picture' => 'https://cdn.myanimelist.net/images/characters/9/215563.jpg',
@@ -25,7 +24,6 @@ class WaifuSeeder extends Seeder
         ]);
 
         DB::table('waifus')->insert([
-            'id' => '2',
             'name' => 'Nezuko Kamado',
             'anime' => 'Kimetsu no Yaiba',
             'picture' => 'https://cdn.myanimelist.net/images/characters/15/381711.jpg',
@@ -35,7 +33,6 @@ class WaifuSeeder extends Seeder
         ]);
         
         DB::table('waifus')->insert([
-            'id' => '3',
             'name' => 'Mayuri Shiina',
             'anime' => 'Steins;Gate',
             'picture' => 'https://cdn.myanimelist.net/images/characters/4/131329.jpg',

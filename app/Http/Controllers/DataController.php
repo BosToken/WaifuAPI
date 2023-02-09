@@ -13,7 +13,8 @@ class DataController extends Controller
 
     public function waifu(){
         $lenght = Waifu::count();
-        $waifu = Waifu::where('id', rand(1, $lenght))->get();
+        // $waifu = Waifu::where('id', rand(1, $lenght))->get("name");
+        $waifu = Waifu::all()->random();
         return $waifu;
     }
 
@@ -71,9 +72,9 @@ class DataController extends Controller
         return back();
     }
 
-    // public function deleteWaifu($id){
-    //     Waifu::where('id', $id)->delete();
-    //     return redirect()->action([DataController::class, 'viewWaifu']);
-    // }
+    public function deleteWaifu($id){
+        Waifu::where('id', $id)->delete();
+        return redirect()->action([DataController::class, 'viewWaifu']);
+    }
     
 }
