@@ -17,7 +17,12 @@ class Controller extends BaseController
     public function welcome(){
         $setting = Settings::get();
         $data = Session::get('user');
-        return view('User.welcome', compact('data', 'setting'));
+        $lenght = Waifu::count();
+        $waifu1 = Waifu::all()->random();
+        $waifu2 = Waifu::all()->random();
+        $waifu3 = Waifu::all()->random();
+        $waifu4 = Waifu::all()->random();
+        return view('User.welcome', compact('data', 'setting', 'waifu1', 'waifu2', 'waifu3', 'waifu4'));
     }
 
     public function doc(){
