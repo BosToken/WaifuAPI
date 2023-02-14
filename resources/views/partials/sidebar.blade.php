@@ -171,6 +171,11 @@
                     <li><a class="dropdown-item" href="/create/waifu">Add Waifu</a></li>
                 </ul>
             </li>
+            <li>
+                <a href="/api/waifu" role="button" target="_blank">
+                    Test API
+                </a>
+            </li>
             
             
             @if($data->role === 1)<hr style="color: white">

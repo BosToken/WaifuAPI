@@ -42,3 +42,6 @@ Route::group(['middleware' => ['Admin']], function () {
 });
 
 Route::get('debug',[LoginController::class, 'debug']);
+Route::get('/:patchMatch(.*)*', function () {
+    return redirect()->route('/');
+});
