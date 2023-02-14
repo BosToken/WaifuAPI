@@ -74,7 +74,7 @@
                 </div>
 
                 <div class="col text-center mx-auto">
-                    <img src="img/claw.png" class="css-class" alt="alt text" style="width: 350px;">
+                    <img src="https://github.com/BosToken/WaifuAPI/blob/master/public/img/claw.png?raw=true" class="css-class" alt="alt text" style="width: 350px;">
                 </div>
             </div>
         </div>
