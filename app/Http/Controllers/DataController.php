@@ -15,7 +15,7 @@ class DataController extends Controller
         $lenght = Waifu::count();
         // $waifu = Waifu::where('id', rand(1, $lenght))->get("name");
         $waifu = Waifu::all()->random();
-        return $waifu;
+        return response()->json($waifu);
     }
 
     public function viewWaifu(){
